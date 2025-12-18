@@ -28,25 +28,36 @@
 ---
 ## 📁 Struktur Folder
 ```
-project/
+Project/
 │
-├── data/                   # Dataset (tidak di-commit, download manual)
+├── data/
+│ └── Recipe Reviews and User Feedback Dataset
 │
-├── notebooks/              # Jupyter notebooks
-│   └── ML_Project.ipynb
+├── images/
+│ ├── Confusion Matrix LTSM.png
+│ ├── Confusion Matrix Random Forest.png
+│ ├── Distribusi Rating Bintang.png
+│ ├── Logistic Regression.png
+│ ├── Panjang Teks Ulasan.png
+│ ├── Perbandingan Performa Model.png
+│ ├── Training & Validation Loss.png
+│ ├── Training vs Validation Accuracy.png
+│ └── WordCloud Ulasan Pengguna.png
 │
-├── src/                    # Source code
-│   
-├── models/                 # Saved models
-│   ├── model_baseline.pkl
-│   ├── model_rf.pkl
-│   └── model_cnn.h5
+├── models/
+│ ├── model_baseline.pkl
+│ ├── model_rf.pkl
+│ └── model_lstm_keras
 │
-├── images/                 # Visualizations
-│   └── r
+├── notebooks/
+│ └── UAS_DataScience.ipynb
 │
-├── requirements.txt        # Dependencies
-├── .gitignore
+├── src/
+│
+├── Checklist Submit.md
+├── Laporan Proyek Machine Learning.md
+├── LAPORAN TUGAS PRAKTIKUM.docx
+├── LICENSE
 └── README.md
 ```
 ---
