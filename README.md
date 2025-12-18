@@ -24,7 +24,6 @@ Setiap model dievaluasi menggunakan metrik klasifikasi untuk menentukan model de
 - Terdapat ketidakseimbangan kelas antara sentimen positif dan negatif.
 
 ---
-<<<<<<< HEAD
 ## 📁 Struktur Folder
 ```
 Project/
@@ -66,7 +65,6 @@ Project/
 - Membandingkan performa model baseline, machine learning, dan deep learning.
 - Menentukan model terbaik berdasarkan hasil evaluasi.
 
->>>>>>> e1233e303e26238de7cf2c345b3665c7303646b1
 ---
 
 ## 📊 Dataset
@@ -137,8 +135,6 @@ Metrik evaluasi yang digunakan:
 - [ ] Deployment menggunakan Streamlit atau Gradio
 
 ---
-
-## 📁 Struktur Folder
 
 ## 🔁 Reproducibility
 
