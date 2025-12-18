@@ -1,31 +1,30 @@
-# 📘 Judul Proyek
-*(Isi judul proyek Anda di sini)*
+# 📘 Analisis Kepuasan Pengguna Terhadap Resep Masakan Berdasarkan Ulasan Teks Menggunakan Machine Learning dan LSTM Deep Learning
 
-## 👤 Informasi
-- **Nama:** [...]  
-- **Repo:** [...]  
-- **Video:** [...]  
-
----
-
-# 1. 🎯 Ringkasan Proyek
-- Menyelesaikan permasalahan sesuai domain  
-- Melakukan data preparation  
-- Membangun 3 model: **Baseline**, **Advanced**, **Deep Learning**  
-- Melakukan evaluasi dan menentukan model terbaik  
+## 👤 Informasi Proyek
+- **Nama:** Rara Aliviana Gumaranti  
+- **Repository:** (isi link GitHub)  
+- **Video Demo / Presentasi:** (isi link video)  
 
 ---
 
-# 2. 📄 Problem & Goals
-**Problem Statements:**  
-- [...]  
-- [...]  
+## 🎯 Ringkasan Proyek
+Proyek ini bertujuan untuk melakukan analisis sentimen terhadap ulasan pengguna pada dataset *Recipe Reviews and User Feedback*.  
+Analisis dilakukan dengan membandingkan tiga pendekatan berbeda, yaitu:
+1. **Baseline Model** (Logistic Regression)
+2. **Advanced Machine Learning Model** (Random Forest)
+3. **Deep Learning Model** (LSTM)
 
-**Goals:**  
-- [...]  
-- [...]  
+Setiap model dievaluasi menggunakan metrik klasifikasi untuk menentukan model dengan performa terbaik.
 
 ---
+
+## 📄 Problem Statement
+- Dataset ulasan tidak memiliki label sentimen eksplisit.
+- Data berbentuk teks tidak terstruktur dan mengandung noise.
+- Terdapat ketidakseimbangan kelas antara sentimen positif dan negatif.
+
+---
+<<<<<<< HEAD
 ## 📁 Struktur Folder
 ```
 Project/
@@ -62,58 +61,109 @@ Project/
 ```
 ---
 
-# 3. 📊 Dataset
-- **Sumber:** [...]  
-- **Jumlah Data:** [...]  
-- **Tipe:** [...]  
+## 🎯 Goals
+- Mengklasifikasikan sentimen ulasan menjadi **positif** dan **negatif**.
+- Membandingkan performa model baseline, machine learning, dan deep learning.
+- Menentukan model terbaik berdasarkan hasil evaluasi.
+
+>>>>>>> e1233e303e26238de7cf2c345b3665c7303646b1
+---
+
+## 📊 Dataset
+- **Sumber:** UC Irvine Machine Learning Repository – *Recipe Reviews and User Feedback Dataset*
+- **Jumlah Data:** 18.180 ulasan (setelah data cleaning)
+- **Tipe Data:** Teks ulasan dan rating bintang
 
 ### Fitur Utama
 | Fitur | Deskripsi |
-|------|-----------|
-| ... | ... |
+|------|----------|
+| `text` | Teks ulasan pengguna |
+| `stars` | Rating bintang (1–5) |
+| `sentiment` | Label sentimen hasil konversi rating |
+| `clean_text` | Teks hasil preprocessing |
 
 ---
 
-# 4. 🔧 Data Preparation
-- Cleaning (missing/duplicate/outliers)  
-- Transformasi (encoding/scaling)  
-- Splitting (train/val/test)  
+## 🔧 Data Preparation
+Tahapan data preparation yang dilakukan:
+- **Data Cleaning:** Menghapus data kosong dan kolom tidak relevan
+- **Labeling Sentimen:** Konversi rating bintang menjadi label sentimen
+- **Text Preprocessing:** Lowercase, penghapusan angka dan tanda baca
+- **Feature Extraction:** TF-IDF untuk model ML
+- **Tokenization & Padding:** Untuk model LSTM
+- **Data Splitting:** Train–test split (80:20) dengan stratifikasi
+- **Data Balancing:** Class weighting untuk menangani data imbalanced
 
 ---
 
-# 5. 🤖 Modeling
-- **Model 1 – Baseline:** [...]  
-- **Model 2 – Advanced ML:** [...]  
-- **Model 3 – Deep Learning:** [...]  
+## 🤖 Modeling
+Model yang digunakan dalam proyek ini:
+- **Model 1 – Baseline:** Logistic Regression (TF-IDF)
+- **Model 2 – Advanced ML:** Random Forest (TF-IDF)
+- **Model 3 – Deep Learning:** LSTM (Embedding + Bidirectional LSTM)
 
 ---
 
-# 6. 🧪 Evaluation
-**Metrik:** Accuracy / F1 / MAE / MSE (pilih sesuai tugas)
+## 🧪 Evaluation
+Metrik evaluasi yang digunakan:
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- Confusion Matrix
 
-### Hasil Singkat
-| Model | Score | Catatan |
-|-------|--------|---------|
-| Baseline | [...] | |
-| Advanced | [...] | |
-| Deep Learning | [...] | |
-
----
-
-# 7. 🏁 Kesimpulan
-- Model terbaik: [...]  
-- Alasan: [...]  
-- Insight penting: [...]  
+### Hasil Evaluasi
+| Model | Accuracy | F1-Score | Catatan |
+|------|----------|----------|---------|
+| Logistic Regression | 0.8188 | 0.8324 | Stabil sebagai baseline |
+| Random Forest | **0.8504** | **0.8517** | Performa terbaik |
+| LSTM | 0.8386 | 0.8422 | Baik, namun belum optimal |
 
 ---
 
-# 8. 🔮 Future Work
-- [ ] Tambah data  
-- [ ] Tuning model  
-- [ ] Coba arsitektur DL lain  
-- [ ] Deployment  
+## 🏁 Kesimpulan
+- **Model Terbaik:** Random Forest  
+- **Alasan:** Memberikan performa tertinggi dan stabil, serta mampu menangkap hubungan non-linear pada data TF-IDF  
+- **Insight:**  
+  - Model ML klasik masih sangat kompetitif untuk analisis sentimen  
+  - Model deep learning membutuhkan tuning dan data lebih besar agar optimal  
 
 ---
 
-# 9. 🔁 Reproducibility
-Gunakan environment:
+## 🔮 Future Work
+- [ ] Menambah jumlah dan variasi data
+- [ ] Hyperparameter tuning lebih lanjut
+- [ ] Menggunakan model pretrained (BERT)
+- [ ] Deployment menggunakan Streamlit atau Gradio
+
+---
+
+## 📁 Struktur Folder
+
+## 🔁 Reproducibility
+
+Untuk memastikan hasil eksperimen dapat direproduksi dengan baik, proyek ini dijalankan menggunakan environment dan dependensi berikut:
+
+### Python Version
+- Python 3.10+
+
+### Dependencies
+```txt
+numpy==1.26.4
+pandas==2.1.4
+scikit-learn==1.4.1
+matplotlib==3.8.3
+seaborn==0.13.2
+
+# Natural Language Processing
+nltk==3.8.1
+regex==2023.12.25
+
+# Deep Learning
+tensorflow==2.15.0
+keras==2.15.0
+
+# Utilities
+joblib==1.3.2
+tqdm==4.66.2
+
