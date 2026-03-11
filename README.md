@@ -2,8 +2,8 @@
 
 ## 👤 Informasi Proyek
 - **Nama:** Rara Aliviana Gumaranti  
-- **Repository:** (isi link GitHub)  
-- **Video Demo / Presentasi:** (isi link video)  
+- **NIM:** 234311050  
+- **Video Demo / Presentasi:** (https://youtu.be/fH6jByask1o) 
 
 ---
 
